@@ -8,7 +8,6 @@ import sqlite3
 import sqlite3
 
 
-
 for i in range(2, 50):
     TotalData = []
     url = 'https://www.yes24.com/24/category/bestseller?CategoryNumber=001&sumgb=06&fetchSize=40&PageNumber=' + str(i)
@@ -78,7 +77,7 @@ for i in range(2, 50):
 
 
     # 데이터베이스 연결
-    conn = sqlite3.connect('/Users/violet/DSLibrary.db')
+    conn = sqlite3.connect('./DSLibrary.db')
 
     # 커서 생성
     cursor = conn.cursor()
