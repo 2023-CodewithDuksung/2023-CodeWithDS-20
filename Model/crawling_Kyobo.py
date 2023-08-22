@@ -5,16 +5,8 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 import sqlite3
+import sqlite3
 
-#Myform > div:nth-child(3)
-#Myform > div:nth-child(4)
-
-#https://www.aladin.co.kr/shop/common/wbest.aspx?BestType=Bestseller&BranchType=1&CID=0&page=1&cnt=1000&SortOrder=1
-#https://www.aladin.co.kr/shop/common/wbest.aspx?BestType=Bestseller&BranchType=1&CID=0&page=2&cnt=1000&SortOrder=1
-
-nameOfBook = []
-infoOfBook = []
-genreOfBook = []
 
 
 for i in range(2, 50):
@@ -85,7 +77,7 @@ for i in range(2, 50):
     print(TotalData)
 
 
-    # 데이터베이스 연결 생성 (파일이 없으면 새로운 데이터베이스 파일이 생성됩니다)
+    # 데이터베이스 연결
     conn = sqlite3.connect('/Users/violet/DSLibrary.db')
 
     # 커서 생성
@@ -132,18 +124,3 @@ for i in range(2, 50):
         cnt += 1
         j += 2
 '''
-
-
-# 데이터 삽입
-'''
-cursor.execute("INSERT INTO users (name, age) VALUES (?, ?)", ("Alice", 30))
-cursor.execute("INSERT INTO users (name, age) VALUES (?, ?)", ("Bob", 25))
-'''
-print(len(nameOfBook))
-print(len(infoOfBook))
-
-'''
-for i in range(len(nameOfBook)):
-
-    # 변경사항 커밋
-    conn.commit()'''
