@@ -13,9 +13,6 @@
             android:name=".ReviewActivity"
             android:exported="false" />
         <activity
-            android:name=".reviewActivity"
-            android:exported="false" />
-        <activity
             android:name=".PlusActivity"
             android:exported="false" />
         <activity
