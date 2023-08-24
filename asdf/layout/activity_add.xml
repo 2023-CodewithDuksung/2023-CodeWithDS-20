@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="76dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:src="@drawable/bookspoke_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="리뷰를 작성할 책 제목을 입력하세요"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_title"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:textColorHint="#aaa"
+            android:background="@drawable/review_add_background"
+            android:hint="내가 사람들과 공유하고 싶은 책은?"
+            android:drawableRight="@drawable/search_24"/>
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="평점을 선택해주세요"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/review_add_background"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_border_24"
+                android:id="@+id/add_star1"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_border_24"
+                android:id="@+id/add_star2"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_border_24"
+                android:id="@+id/add_star3"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_border_24"
+                android:id="@+id/add_star4"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star_border_24"
+                android:id="@+id/add_star5"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="리뷰 작성"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/edit_review_content"
+            android:padding="10dp"
+            android:textColorHint="#aaa"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:background="@drawable/review_add_background"
+            android:hint="책에 대한 소개와 느낀 점 등 리뷰를 작성해 주세요!"/>
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_custom_blue"
+            android:text="리뷰 등록하기" />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
