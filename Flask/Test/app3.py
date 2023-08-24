@@ -93,14 +93,11 @@ def bookModel(keyword, result):
     conn.close()
 
     result.strip('/')
+    final_result = result
+
+    return final_result
 
 
-
-    class Recommendation(Resource):
-        def get(self):
-            return result
-
-    api.add_resource(Recommendation, '/recomm/')
 
 
 
@@ -108,22 +105,19 @@ def bookModel(keyword, result):
 
 
 ################################## MAIN ################################
-url = 'http://10.0.2.2./getdata/'  # 서버 주소와 엔드포인트 경로
-keyword = []  # 데이터를 저장할 리스트
+keyword = []
 
-response = requests.get(url)
+@app.route('/getdata/', methods=['POST'])
+def process_input():
+    data = requests.json
+    user_input = data.get('input')
 
-if response.status_code == 200:  # 성공적인 응답 확인
-    data = response.json()  # JSON 형식의 응답 데이터를 파싱
-    keyword.append(data)  # 데이터를 리스트에 추가
+    keyword.append(user_input)
 
-    bookModel(keyword, result)
+    output = bookModel(keyword, result)
 
-
-else:
-    print('서버 응답 오류:', response.status_code)
-
-
+    return output
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5001, debug=False)
+
